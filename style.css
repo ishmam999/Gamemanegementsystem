@@ -1,0 +1,26 @@
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.left{
+    margin: auto;
+    width : 100%;
+    border: 3px solid black;
+    padding: 10px;
+    padding-right: 100px;
+    text-align: right;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
