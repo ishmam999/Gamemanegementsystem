@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Forgot Password</title>
-</head>
-<body>
-	<form action="forgothandler.php">
-		<fieldset>
-				<legend>Change Password</legend>
+    <head>
+        <title>Viral</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="left">
+            <p>
+                 <a href="Home.html">Home</a> <a href="login.html">Login </a> <a href="register.html">Registration</a>  
+            </p>
+        </div>
+        <hr>
+        <div class="center">
+            <form method="post" action="forgothandler.php">
+            <fieldset>
+                    <legend>Forgot Password</legend>
 
-				<label>Old Password</label>
-				<input type="password" name="oldpassword"/>
-				<br>
-				<label>New Password</label>
-				<input type="password" name="newpassword"/>
-				<br>
-				<label>Retype New Password</label>
-				<input type="password" name="retypepassword"/>
-				<br>
-				<hr>
-				<input type="submit" value="Submit"/>	
-			</fieldset>
-	</form>
-</body>
+                    <label><b>Old Password</b></label>
+                    <input type= "text" placeholder="Enter Username" name="password" required>
+                    <br>
+                    <label><b>New Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="newpassword" required>
+                    <br>
+                    <label><b>Retype Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="retypepassword" required>
+                    <br>
+                    <hr>
+                    <br>
+                    <button type="submit">Change Password</button>	
+                </fieldset>
+        </form>
+        </div>
+        <hr>
+        <div class="footer">
+            <p>Copyright © 2017</p>
+        </div>
+    </body>
 </html>

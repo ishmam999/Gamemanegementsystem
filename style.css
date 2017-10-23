@@ -6,12 +6,12 @@
     
 }
 
-.left{
+.right{
     margin: auto;
-    width : 100%;
+    width : 96%;
     border: 3px solid black;
-    padding: 10px;
-    padding-right: 100px;
+    padding: 1rem;
+    padding-right: 5px;
     text-align: right;
 }
 
@@ -23,4 +23,22 @@
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+}
+
+button{
+    background-color: gray;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+form {
+    border: 3px solid #f1f1f1;
 }

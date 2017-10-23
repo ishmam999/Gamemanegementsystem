@@ -1,25 +1,11 @@
 <?php
-	var_dump($_REQUEST);
-	$isValid = true; 
-	$name=$_REQUEST['username'];
-	$password=$_REQUEST['password'];
-	
-	if(empty($name)||empty($password)){
-		echo "No Username or Password";
-		$isValid=false;
-	}
-	else{
-		if(strlen($name)<2){
-			echo "There must be two words";
-			$isValid=false;
-		}
-		else if(strlen($password)<8){
-			echo "Password can not be less than 8 characters";
-			$isValid=false;
-		}
-		
-	}
-	if($isValid==true){
-		echo "Shera";
-	}
-?>
+  session_start();
+  $userList = $_SESSION['userList'];
+  foreach($userList as $user){
+	  if($user['username']==$_REQUEST['username']){
+		  if($user['password']==$_REQUEST['password']){
+			  header("location: Home.html");
+		  }
+	  }
+  }
+?> 
