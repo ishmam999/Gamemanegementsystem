@@ -1,22 +1,22 @@
 <?php
-	session_start();
-	var_dump($_REQUEST);
-	if(isset($userList)){
-		$_SESSION['userList'] = array();
-	}
-	$user['name'] = $_REQUEST['name'];
-	$user['email'] = $_REQUEST['email'];
-	$user['username'] = $_REQUEST['username'];
-	$user['password'] = $_REQUEST['password'];
-	
-	$user['gender'] = $_REQUEST['gender'];
-	
-	
-	$size = count($_SESSION['userList']);
-	$_SESSION['userList'][$size] = $user;
-	
-	var_dump($_SESSION['userList']);
-	
-	echo "Sign Up Complete";
-?> 
-  
+    $con = mysqli_connect("localhost","root","","test");
+    
+    if(!$con){
+        die("Connection failed: ".mysqli_connect_error());
+    }
+    echo "Connected Successfully";
+
+    $name = $_REQUEST["name"];
+    $email = $_REQUEST["email"];
+    $username = $_REQUEST["username"];
+    $password = $_REQUEST["password"];
+
+    $sqli = "insert into lab values ('".$name."','".$email."','".$username."','".$password."')";
+    $result = mysqli_query($con,$sqli)or die (mysqli_error($con));
+
+    if($result){
+        echo "data inserted";
+    }
+    else
+        echo "no inserted";
+?>
